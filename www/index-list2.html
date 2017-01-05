@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.log('Error', err));
+    }
+  </script>-->
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+</head>
+<body ng-app="starter">
+
+<ion-pane>
+  <ion-header-bar class="bar-royal">
+    <h1 class="title">Ionic Blank Starter</h1>
+  </ion-header-bar>
+  <ion-content>
+    <!--Emmet-->
+    <!--ul.list>li.item{Item $$}*30-->
+    <!--.list>a[href="#"].item{Item $$}*30-->
+    <div class="list">
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-email"></i>
+        Item 01</a>
+      <a href="#" class="item item-icon-left item-icon-right">
+        <i class="icon ion-chatbubble-working"></i>
+        Item 02
+        <i class="icon ion-ionic"></i>
+      </a>
+      <a href="#" class="item  item-icon-left">
+        <i class="icon ion-mic-a"></i>
+        Item 04
+        <span class="item-note">Record</span>
+      </a>
+      <a href="#" class="item">
+        Item 04
+        <span class="badge badge-assertive">3</span>
+      </a>
+      <a href="#" class="item  item-button-right">Item 05
+        <button class="button button-assertive">
+          <i class="icon ion-person"></i>
+        </button>
+      </a>
+      <div class="item item-divider">Group2</div>
+      <a href="#" class="item item-avatar">Item 017
+        <img src="http://placehold.it/100x100" alt="Avatar"/>
+      </a>
+      <a href="#" class="item item-thumbnail-left">
+        <img src="http://placehold.it/100x100" alt="Avatar"/>
+
+        <h2>Item 08</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea hic modi quam? Accusantium consectetur dicta
+          eos est inventore ipsa ipsum iure neque omnis, placeat provident, reiciendis sapiente sequi sunt vel?</p>
+      </a>
+      <a href="#" class="item">Item 09</a>
+      <a href="#" class="item">Item 10</a>
+    </div>
+
+
+  </ion-content>
+</ion-pane>
+</body>
+</html>
