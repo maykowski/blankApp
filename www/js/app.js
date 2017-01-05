@@ -37,7 +37,15 @@ angular.module('starter', ['ionic'])
       };
       $scope.toggleStar = function (item) {
         item.star = !item.star;
-        $scope
       }
+
+      $scope.doRefresh = function () {
+        $http.get('js/data.json').success(function (data) {
+          $scope.artists = data.speakers;
+          $scope.$broadcast('scroll.refreshComplete')
+
+        })
+
+        }
     });
   }]);
