@@ -27,6 +27,9 @@ angular.module('starter', ['ionic'])
       $scope.artists = data.speakers;
 
 
+      $scope.onItemDelete = function (item) {
+        $scope.artists.splice($scope.artists.indexOf(item),1)
+      }
       $scope.moveItem = function (item, fromIndex, toIndex) {
         // alert(fromIndex + " " + toIndex);
         $scope.artists.splice(fromIndex, 1);
