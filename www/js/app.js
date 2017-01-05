@@ -29,11 +29,15 @@ angular.module('starter', ['ionic'])
 
       $scope.onItemDelete = function (item) {
         $scope.artists.splice($scope.artists.indexOf(item),1)
-      }
+      };
       $scope.moveItem = function (item, fromIndex, toIndex) {
         // alert(fromIndex + " " + toIndex);
         $scope.artists.splice(fromIndex, 1);
         $scope.artists.splice(toIndex, 0, item);
+      };
+      $scope.toggleStar = function (item) {
+        item.star = !item.star;
+        $scope
       }
     });
   }]);
