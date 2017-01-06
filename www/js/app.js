@@ -30,17 +30,25 @@ angular.module('starter', ['ionic'])
         abstract: true,
         templateUrl: 'templates/tabs.html'
       })
-      .state('tabs.list', {
-          url: '/list',
+      .state('tabs.home', {
+          url: '/home',
           views: {
-            'list-tab': {
-              templateUrl: 'templates/list.html',
-              controller: 'ListController'
+            'home-tab': {
+              templateUrl: 'templates/home.html'
             }
           }
         }
-      )
-   $urlRouterProvider.otherwise('/tab/list')
+      ).state('tabs.list', {
+        url: '/list',
+        views: {
+          'list-tab': {
+            templateUrl: 'templates/list.html',
+            controller: 'ListController'
+          }
+        }
+      }
+    )
+    $urlRouterProvider.otherwise('/tab/home')
   })
   .controller('ListController', ['$scope', '$http', function ($scope, $http) {
     $http.get('js/data.json').success(function (data) {
